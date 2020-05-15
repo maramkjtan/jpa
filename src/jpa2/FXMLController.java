@@ -97,6 +97,11 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void buttonDeleteHandle(ActionEvent event) {
+        EntityManager em = emf.createEntityManager();
+        Student s = em.find(Students.class, tableView.getSelectionModel().getSelctionItem().getId());
+        em.getTransaction().begin();
+        em.remove(s);
+        em.getTransaction().commit();
     }
 
     @FXML
