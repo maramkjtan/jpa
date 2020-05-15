@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jpa2.FXMLController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ff6666;">
+         <children>
+            <HBox prefHeight="288.0" prefWidth="600.0">
+               <children>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="id">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="40.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="33.0" prefWidth="134.0" text="name" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="40.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="major" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="40.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="grade" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="40.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfid" onAction="#textfieldIdHandle" GridPane.columnIndex="1" />
+                        <TextField fx:id="tfname" onAction="#textfieldNameHandle" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfmajor" onAction="#textfieldMajorHandle" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="tfgrade" onAction="#textfieldGradeHandle" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableview" prefHeight="288.0" prefWidth="301.0">
+                     <columns>
+                        <TableColumn fx:id="tcid" prefWidth="75.0" text="id" />
+                        <TableColumn fx:id="tcname" prefWidth="75.0" text="name" />
+                        <TableColumn fx:id="tcmajor" prefWidth="75.0" text="major" />
+                        <TableColumn fx:id="tcgrade" prefWidth="75.0" text="grade" />
+                     </columns>
+                     <HBox.margin>
+                        <Insets left="37.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="Viewbtn" mnemonicParsing="false" onAction="#buttonViewHandle" stylesheets="@../../../JavaApplication49/src/javaapplication49/newStyle.css" text="View">
+                     <HBox.margin>
+                        <Insets left="40.0" top="37.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="addbtn" mnemonicParsing="false" onAction="#buttonAddHandle" stylesheets="@../../../JavaApplication49/src/javaapplication49/newStyle.css" text="Add student">
+                     <HBox.margin>
+                        <Insets left="60.0" top="37.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="editbtn" mnemonicParsing="false" onAction="#buttonEditHandle" stylesheets="@../../../JavaApplication49/src/javaapplication49/newStyle.css" text="Edit">
+                     <HBox.margin>
+                        <Insets left="30.0" top="37.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deletebtn" mnemonicParsing="false" onAction="#buttonDeleteHandle" stylesheets="@../../../JavaApplication49/src/javaapplication49/newStyle.css" text="Delete">
+                     <HBox.margin>
+                        <Insets left="40.0" top="37.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="addcousebtn" mnemonicParsing="false" onAction="#buttonAddcourceHandle" stylesheets="@../../../JavaApplication49/src/javaapplication49/newStyle.css" text="Add cource">
+                     <HBox.margin>
+                        <Insets left="50.0" top="37.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>
